@@ -1,0 +1,12 @@
+node_modules
+.cache/
+public/
+.DS_Store
+yarn*
+*.log
+contentful-import-error-log*
+.env*
+.contentful.json
+
+# IDE
+.idea
