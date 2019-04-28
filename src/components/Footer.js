@@ -63,7 +63,7 @@ const Footer = () => (
           About
         </Link>
         &nbsp;&nbsp;&nbsp;
-        <a href="mailto:okabe.hisa@gmail.com">Contact</a>
+        <a href="mailto:&#111;&#107;&#97;&#98;&#101;&#46;&#104;&#105;&#115;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">Contact</a>
       </Item>
     </List>
   </Wrapper>
