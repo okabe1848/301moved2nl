@@ -115,5 +115,9 @@ const GlobalStyle = createGlobalStyle`
       box-shadow: none;
     }
   }
+  
+  p.center {
+    text-align: center;
+  }
 `
 export default GlobalStyle
