@@ -11,7 +11,10 @@ import config from '../utils/siteConfig'
 import Hero from '../components/Hero'
 
 const Index = ({ data, pageContext }) => {
-  const posts = data.allContentfulPost.edges
+
+  let posts = data.allContentfulPost.edges
+  const findSlugIndex = (slug) => posts.findIndex(e => e.node.slug === slug);
+  posts = data.allContentfulPost.edges.filter((e, idx) => findSlugIndex(e.node.slug) === idx);
   const featuredPost = posts[0].node
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
