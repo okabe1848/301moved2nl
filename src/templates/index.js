@@ -12,9 +12,7 @@ import Hero from '../components/Hero'
 
 const Index = ({ data, pageContext }) => {
 
-  let posts = data.allContentfulPost.edges
-  const findSlugIndex = (slug) => posts.findIndex(e => e.node.slug === slug);
-  posts = data.allContentfulPost.edges.filter((e, idx) => findSlugIndex(e.node.slug) === idx);
+  const posts = data.allContentfulPost.edges
   const featuredPost = posts[0].node
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
@@ -54,6 +52,7 @@ const Index = ({ data, pageContext }) => {
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulPost(
+      filter: {node_locale: {eq: "ja"}}
       sort: { fields: [publishDate], order: DESC }
       limit: $limit
       skip: $skip
