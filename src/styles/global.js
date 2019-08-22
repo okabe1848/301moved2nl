@@ -119,5 +119,9 @@ const GlobalStyle = createGlobalStyle`
   p.center {
     text-align: center;
   }
+
+  a.footnote-backref {
+    display: none;
+  }
 `
 export default GlobalStyle
